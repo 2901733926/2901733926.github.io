@@ -29,8 +29,8 @@
         }
         .img-box{
             width:100%;
-            heigth:200px;
-            background: url('images/background.png')
+            heigth:800px;
+            background: url('images/background1.png')
         }
     </style>
 </head>
@@ -40,9 +40,28 @@
         <header class="inner">
 <!--           <img id="lab_logo" src="images/logo.png"/> -->
           <div>
-              <div style="width: 80%" class="img-box">
-                <h1 id="project_title">One-shot Voice Based on Enhanced Speaker Encoder and Postnet</h1>
-                <h2 id="project_tagline">Submitted to Applied acoustics</h2>
+              <div style="width: 100%" class="img-box">
+                <h1 id="project_title" style="color:white" font face="Times New Roman">One-shot Voice Based on Enhanced Speaker Encoder and Postnet</h1>
+                <h2 id="project_tagline" style="color:white" font face="Times New Roman">Submitted to Applied acoustics</h2>
+                <h3 id="Huimin-Wang-Ning-Chen" style="color:white"><em>Huimin Wang,Ning Chen*</em></h3>
+                <p style="color:white"><em>* Corresponding author.</em></p>
+                <h1 id="abstract" font face="Times New Roman">Abstract</h1>
+                <h6 style="white" font face="Times New Roman">
+                    VQMIVC achieves promising results on one-shot voice conversion (VC) task. However, the speaker
+                    embedding extracted by VQMIVC suffers from information redundancy and information leakage,
+                    resulting in low quality of the converted speech. To alleviate this issue, we creatively introduce
+                    a simple, parameter-free attention module (SimAM) to force the speaker encoder to focus on the
+                    speaker information while compressing irrelevant information. In addition, the ConvNeXt block is
+                    introduced after the downsampling layer in the speaker encoder to extract more global and high-level
+                    speaker information while balancing the computational efficiency. Furthermore, since the postnet
+                    in VQMIVC is made up of several convolutional layers, it is ineffective at capturing the global
+                    features of the predicted mel-spectrogram. In order to further refine the predicted mel-spectrogram, we
+                    propose a transformer-based postnet as transformer has a powerful ability to capture global features.
+                    Finally, a feature fusion module is designed to efficiently exploit the complementary nature of the two
+                    postnets. Experiments show that our proposed model can significantly improve the quality, speaker
+                    similarity and naturalness while maintaining low computational complexity and time complexity
+                    when compared with VQMIVC and other state-of-the-art (SOTA) baselin
+                </h6>
               </div>
           </div>
         </header>
