@@ -60,20 +60,18 @@
     </div>
     <h1 id="abstract" font face="Times New Roman">Abstract</h1>
     <h4 font face="Times New Roman" style="line-height: 2em;">
-        VQMIVC achieves promising results on one-shot voice conversion (VC) task. However, the speaker
-        embedding extracted by VQMIVC suffers from information redundancy and information leakage,
-        resulting in low quality of the converted speech. To alleviate this issue, we creatively introduce
-        a simple, parameter-free attention module (SimAM) to force the speaker encoder to focus on the
-        speaker information while compressing irrelevant information. In addition, the ConvNeXt block is
-        introduced after the downsampling layer in the speaker encoder to extract more global and high-level
-        speaker information while balancing the computational efficiency. Furthermore, since the postnet
-        in VQMIVC is made up of several convolutional layers, it is ineffective at capturing the global
-        features of the predicted mel-spectrogram. In order to further refine the predicted mel-spectrogram, we
-        propose a transformer-based postnet as transformer has a powerful ability to capture global features.
-        Finally, a feature fusion module is designed to efficiently exploit the complementary nature of the two
-        postnets. Experiments show that our proposed model can significantly improve the quality, speaker
-        similarity and naturalness while maintaining low computational complexity and time complexity
-        when compared with VQMIVC and other state-of-the-art (SOTA) baselines.
+        VQMIVC achieves promising results on one-shot voice conversion (VC) task. However, since its
+        speaker encoder suffers from information redundancy and information leakage, and the postnet
+        cannot capture the global features of the predicted mel-spectrogram efficiently, the quality of the
+        converted speech is unsatisfactory. To alleviate this issue, first, we introduce the simple, parameter-
+        free attention module (SimAM) to make the speaker encoder focus on speaker-related information
+        while compressing speaker-irrelevant information. Secondly, the ConvNeXt block is integrated into
+        the speaker encoder to extract more global and high-level speaker representation while balancing
+        the computational complexity. Finally, a Transformer-based postnet is fused with the original postnet
+        to take advantage of both local and global features of the predicted mel-spectrogram to reconstruct
+        its fine details. Experiments on VCTK dataset demonstrate that the proposed model outperforms
+        VQMIVC and other state-of-the-art (SOTA) baselines in both objective and subjective evaluations
+        while maintaining almost the same computational complexity as VQMIVC.
     </h4>
     <h2>One-shot VC performance</h2>
     <h4>
@@ -95,6 +93,8 @@
                 </audio>
                 <br>
                 p262_013.wav
+                <br>
+                Some have accepted it as a miracle without physical explanation. 
             </td>
                <td rowspan="4">
                 <audio controls>
@@ -141,6 +141,8 @@
                 </audio>
                 <br>
                 p262_327.wav
+                <br>
+                It is a private matter between the firm and our staff.
             </td>
                <td rowspan="4">
                 <audio controls>
@@ -188,6 +190,8 @@
                 </audio>
                 <br>
                  p262_336.wav
+                <br>
+                 Hopefully, we can learn from our mistakes.
              </td>
               <td rowspan="4">
                 <audio controls>
@@ -234,6 +238,8 @@
                 </audio>
                 <br>
                 p262_209.wav
+                <br>
+                We'll have to work hard today.
             </td>
             <td rowspan="4">
                 <audio controls>
@@ -281,6 +287,8 @@
                 </audio>
                 <br>
                 p255_267.wav
+                <br>
+                An appeal against the sentence was dismissed the following year.
             </td>
                <td rowspan="4">
                 <audio controls>
@@ -327,6 +335,8 @@
                 </audio>
                 <br>
                 p255_296.wav
+                <br>
+                If you can run a computer, you can talk to the world.
             </td>
                <td rowspan="4">
                 <audio controls>
@@ -374,6 +384,8 @@
                 </audio>
                 <br>
                 p263_056.wav
+                <br>
+                We have not given up hope.
             </td>
             <td rowspan="4">
                 <audio controls>
@@ -420,6 +432,8 @@
                 </audio>
                 <br>
                 p263_376.wav
+                <br>
+                Like his acting, it was an accident.
             </td>
                <td rowspan="4">
                 <audio controls>
